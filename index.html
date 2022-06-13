@@ -17,7 +17,7 @@ awesome/4.7.0/css/font-awesome.min.css">
 <section class="header">
     <nav>
         <a href="index.html"><img src="images/WhatsAppImage.jpeg"></a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="">HOME  </a></li>
@@ -37,6 +37,24 @@ awesome/4.7.0/css/font-awesome.min.css">
 </div>
 
 </section>
+
+<!--- Javascriot for toggle menu ---->
+
+<script>
+    var navLinks = document.getElementById(navLinks);
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+
+
 <footer>
     <h3>Professional Photographers Hub &copy</h3>
     <h3>Designed by: Precious Orugiengha</h3>
