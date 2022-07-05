@@ -24,17 +24,19 @@ nav img {
 }
 .nav-links {
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 .nav-links ul li {
     list-style: none;
     display: inline-block;
-    padding: 8px 12px;
+    padding: 15px;
     position: relative;
+    width: 120px;
+    margin: 15px;
 }
 
 .nav-links ul li a {
-    color: #fff;
+    color: rgb(255, 243, 11);
     text-decoration: none;
 }
 .nav-links ul li::after{
@@ -104,15 +106,37 @@ nav .fa{
     display: none;
 }
 footer {
+    
     padding: 25px 50px;
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+     background: #f44336;
 }
 footer .socials img{
     padding-top: 15px;
+    border-radius: 40%;
 }
+
+.user-submenu{
+    display: none;
+    display: block;
+    position: absolute;
+
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.user-submenu ul li:hover{
+    display: block;
+    margin: 10px;
+}
+
+
+
+
+
+
 
 @media(max-width: 700px){
     .text-box h1{

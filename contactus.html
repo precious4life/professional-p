@@ -4,48 +4,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROFESSIONAL PHOTOGRAPHERS HUB</title>
-    <link rel="stylesheet" href="styles/about.css">
+    <title>CONTACT PAGE</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?
 family=Poppins:wght@100;200;300;400;600;700&display=swap"
 rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-
 awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style>
+    form{
+        /*center the form to the page*/
+
+        margin: 0 auto;
+        width: 400px;
+        /*padding outline*/
+        padding: 1em;
+        border: 1px solid rgb(184, 214, 15);
+        background: rgb(23, 221, 247);
+        border-radius: 1em;
+
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    form li + li{
+        margin-top: 1em;
+    }
+
+    label{
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+    }
+
+    input, textarea {
+        /* to make sure that all the text fields have the same fonts, textarea have a monoface fonts style by defaults*/
+        font: 1em sans-serif;
+        width: 300px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+    }
+
+    input:focus, textarea:focus {
+        /* additional highlight for focused elements*/
+        border-color: #000;
+    }
+    textarea{
+        /*aligns multiline text fields with their labels*/
+
+        vertical-align: top;
+
+        /*provides space to type some text*/
+
+        height: 5em;
+    }
+
+    button{
+        margin-left: 7em;
+    }
+
+    #feedback{
+        background-color: antiquewhite;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: .5em;
+
+        /*make this element invisible until we are ready for it*/
+        display: none;
+    }
+
+    .moveDown {
+        margin-top: 3em;
+    }
+</style>
+
+
+
+
+
 </head> 
 <body>
-<section class="header">
-    <nav>
-        <a href="index.html"><img src="images/WhatsAppImage.jpeg"></a>
-        <div class="nav-links">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="ABOUTUS.html">ABOUT</a></li>
-                <li><a href="userportal.html">USER PORTAL</a></li>
-                <li><a href="categories.html">CATEGORIES</a></li>
-            </ul>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/WhatsAppImage.jpeg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME  </a></li>
+                    <li><a href="aboutus.html">ABOUT</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                    <li><a href="userportal.html">USER PORTAL</a></li>
+                    <li><a href="categories.html">CATEGORIES</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>GET IN TOUCH WITH US</h1>
+            <p>For complaints and enquiries please endavour to contact us we are available 24/7. <br>for your support. NOTE: For complaints and enquiries our team would get back to you within 24/hrs.
+                Thanks alot for your time.<br> Mail us at: iwori4real@outlook.com 
+            Telephone : +2348162357060
+            Whatsapp: +2348162357060 </p>
+                
         </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
-    </nav>
-<div class="text-box">
-    <h1>GET IN TOUCH WITH US</h1>
-    <p>For complaints and enquiries please endavour to contact us <br>
-        we are available 24/7. for your support.</p>
-    <p class="contact"> Mail us at: iwori4real@outlook.com <br>
-    Telephone : +2348162357060<br>
-    Whatsapp: +2348162357060 </p>
-        <P>NOTE: For complaints and enquiries our team would get back to you within<br>
-        24/hrs. Thanks alot for your time.</P>
-<div class="social-media">
-
-    <a href="https://mobile.facebook.com/DP-107957578609973/?paipv=1"><img src="images/facebook.png" alt="facebook site logo and link"></a>
-    <a href=""><img src="images/instagram.png" alt="instagram site logo and link"></a>
-    <a href="https://twitter.com/DestinationPho1"><img src="images/twitter.png" alt="twitter site logo and link"></a>
-</div>
-
-</div>
-
     </section>
+
+    <form action="my-handling-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+                <label for="mail">Email: </label>
+                <input type="email" id="email" name="user_email" >
+            </li>
+            <li>
+                <label for="msg">Message: </label>
+                <textarea name="user_message" id="msg" cols="30" rows="10"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Send Message</button>
+            </li>
+        </ul>
+    </form>
+
+
+    <footer>
+        <h3>Professional Photographers Hub &copy<br>Designed by: Precious Orugiengha</h3>
+        <div class="socials">
+            <a href="https://twitter.com/DestinationPho1"><img src="images/twitter.png" alt="site twitter page"></a>
+            <a href="#"><img src="images/facebook.png" alt="site facebook page"></a>
+            <a href="#"><img src="images/instagram.png" alt="site instagram page"></a>
+        </div>
+    </footer>
+
+    <!--- Javascriot for toggle menu ---->
+
+    <script>
+        var navLinks = document.getElementById(navLinks);
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
 </body>
 </html>
+
